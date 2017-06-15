@@ -24,7 +24,7 @@ def validate_csv_file(filename):
 		try:
 			csv_file = open(filename, 'rb')
 		except IOError:
-			raise slate.UsageException("can't open csv_db fileeee %s" % filename)
+			raise slate.UsageException("can't open csv_db file %s" % filename)
 
 		csv_reader = csv.reader(csv_file, delimiter=delimiter, quotechar='"')
 		headers = next(csv_reader)
